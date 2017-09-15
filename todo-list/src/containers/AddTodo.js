@@ -1,0 +1,30 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+export default class AddTodo extends Component {
+	render() {
+		return (
+			<div>
+				<input type='text' ref='input' onKeyUp={this.handlerKeyUp.bind(this)}/>
+				<button onClick={this.handleClick.bind(this)}>Add</button>
+			</div>
+		);
+	};
+
+	handlerKeyUp(e){
+		if(e.keyCode === 13){
+			this.handleClick();
+		}
+	};
+
+	handleClick(e) {
+		const node = this.refs.input;
+		const text = node.value.trim();
+		this.props.onAddClick(text);
+		node.value = '';
+	};
+}
+
+AddTodo.propTypes = {
+	onAddClick: PropTypes.func.isRequired
+};
