@@ -22,6 +22,28 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 	background-color: #dddddd;
+	@at-root {
+		.img-figure {
+			position: absolute;
+			width: 360px;
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+			background-color: #ffffff;
+			img {
+				max-width: 280px;
+				max-height: 280px;
+			}
+		}
+		figcaption {
+			text-align: center;
+			.img-title {
+				margin: 20px 0 0 0;
+				color: #a7a0a2;
+
+			}
+		}
+	}
 }
 /* image -- end */
 
