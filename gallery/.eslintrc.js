@@ -31,6 +31,7 @@ module.exports = {
 		'no-undef': 0,
 		// 定义未使用
 		'no-unused-vars': 0,
-		'jsx-quotes':  ['error', 'prefer-single']
+		'jsx-quotes':  ['error', 'prefer-single'],
+		'max-len': 0
 	}
 };
